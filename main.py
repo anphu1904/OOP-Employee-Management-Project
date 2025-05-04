@@ -12,7 +12,6 @@ class LoginWindow(ctk.CTk):
         self.minsize(800, 500)
         ctk.set_appearance_mode("light")
 
-        # Làm mờ nền khi mở
         self.attributes("-alpha", 0.0)
         self.fade_in_alpha = 0.0
         self.after(10, self.fade_in)
@@ -45,6 +44,7 @@ class LoginWindow(ctk.CTk):
             self.char_labels.append(lbl)
 
         self.animate_rainbow_letters()
+
         self.entry_user = ctk.CTkEntry(inner, placeholder_text="Username", width=250)
         self.entry_user.pack(pady=5)
 
@@ -74,9 +74,8 @@ class LoginWindow(ctk.CTk):
             self.original_image = Image.new("RGB", (600, 700), color="gray")
 
         self.tk_image = None
-
-        self.update_idletasks()  # Cập nhật kích thước layout
-        self.resize_image()      # Hiển thị ảnh ngay lập tức
+        self.update_idletasks()
+        self.resize_image()
 
         self.bind("<Configure>", self.delayed_resize)
         self._resize_after_id = None
@@ -114,6 +113,7 @@ class LoginWindow(ctk.CTk):
             lbl.configure(text_color=color)
         self.color_index = (self.color_index + 1) % len(self.colors)
         self.after(200, self.animate_rainbow_letters)
+
     def delayed_resize(self, event):
         if self._resize_after_id:
             self.after_cancel(self._resize_after_id)
@@ -146,22 +146,26 @@ class App(ctk.CTk):
 
         fields = ["Mã NV", "Họ tên", "Ngày sinh", "Giới tính", "Quê quán", "Email", "SĐT", "Phòng ban", "Năm vào làm"]
         self.entries = {}
-        for field in fields:
-            entry = ctk.CTkEntry(self.frame, placeholder_text=field)
-            entry.pack(pady=5, fill='x', padx=100)
-            self.entries[field] = entry
+
+        if self.role == "admin":
+            for field in fields:
+                entry = ctk.CTkEntry(self.frame, placeholder_text=field)
+                entry.pack(pady=5, fill='x', padx=100)
+                self.entries[field] = entry
 
         self.frame2 = ctk.CTkFrame(self)
         self.frame2.pack(pady=10)
 
         self.entry_search = ctk.CTkEntry(self.frame2, placeholder_text="Tìm theo mã hoặc tên", width=200)
         self.entry_search.grid(row=0, column=0, padx=5)
+
         self.btn_search = ctk.CTkButton(self.frame2, text="Tìm", command=self.tim_nv, fg_color="#2196F3", hover_color="#1976D2")
         self.btn_search.grid(row=0, column=1, padx=5)
 
         if self.role == "admin":
             self.btn_add = ctk.CTkButton(self.frame2, text="Thêm", command=self.them_nv, fg_color="#4CAF50", hover_color="#45a049")
             self.btn_add.grid(row=0, column=2, padx=5)
+
             self.btn_delete = ctk.CTkButton(self.frame2, text="Xoá", command=self.xoa_nv, fg_color="#f44336", hover_color="#d32f2f")
             self.btn_delete.grid(row=0, column=3, padx=5)
 
@@ -233,7 +237,6 @@ class App(ctk.CTk):
         self.output.delete("1.0", "end")
         for nv in self.danh_sach_nv.ds:
             self.output.insert("end", f"{nv}\n")
-
 
 if __name__ == "__main__":
     LoginWindow().mainloop()
