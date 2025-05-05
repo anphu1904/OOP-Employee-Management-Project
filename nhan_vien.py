@@ -7,6 +7,14 @@ class NhanVien(ConNguoi):
         self._phong_ban = phong_ban
         self._nam_vao_lam = nam_vao_lam
 
+    @property
+    def ho_ten(self):
+        return self._ho_ten
+
+    @ho_ten.setter
+    def ho_ten(self, value):
+        self._ho_ten = value
+        
     def to_dict(self):
         data = super().to_dict()
         data.update({

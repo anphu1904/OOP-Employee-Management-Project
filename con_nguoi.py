@@ -7,6 +7,14 @@ class ConNguoi:
         self._email = email
         self._sdt = sdt
 
+    @property
+    def ho_ten(self):
+        return self._ho_ten
+
+    @ho_ten.setter
+    def ho_ten(self, value):
+        self._ho_ten = value
+        
     def to_dict(self):
         return {
             "ho_ten": self._ho_ten,
