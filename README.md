@@ -57,7 +57,7 @@ python main.py
 
 - `customtkinter` – Modern UI for Tkinter
 - `tkinter` - Original UI
-- `tkcalendar` - Input date by calendar
+- `tkcalendar` - Input date with calendar
 - `Pillow` – Image processing
 - `JSON` & `csv` – File Processing
 
