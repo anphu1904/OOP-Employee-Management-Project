@@ -59,7 +59,7 @@ python main.py
 - `tkinter` - Original UI
 - `tkcalendar` - Input date by calendar
 - `Pillow` – Image processing
-- `JSON` & `csv` - File Processing
+- `JSON` & `csv` – File Processing
 
 ## 📜 License
 
