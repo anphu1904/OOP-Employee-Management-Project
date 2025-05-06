@@ -1,2 +1,3 @@
 customtkinter
+tkinter
 Pillow
