@@ -11,7 +11,9 @@ A modern employee management application built with Python and [CustomTkinter](h
 - Aesthetic interface with background image and loading effects
 
 ## 🖼 Interface
-![Demo](nv.png)
+![Demo](login.png)
+![Demo](admin.png)
+![Demo](employee.png)
 
 ## 🚀 Installation
 
