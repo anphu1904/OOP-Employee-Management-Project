@@ -18,7 +18,7 @@ def LoadingOverlay(parent, text="Đang xử lý..."):
         font=ctk.CTkFont("Segoe UI", 20, "bold"),
         text_color="white"
     )
-    label.place(relx=0.5, rely=0.5, anchor="center")
+    label.place(relx=0.42, rely=0.42, anchor="center")
     overlay.update()
     return overlay
 
