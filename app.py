@@ -3,9 +3,6 @@ from datetime import datetime
 from tkcalendar import DateEntry
 from danh_sach_nhan_vien import DanhSachNhanVien
 from nhan_vien import NhanVien
-from PIL import Image, ImageTk
-import time
-import threading
 
 class DateEntryCustom(ctk.CTkFrame):
     def __init__(self, master=None, **kwargs):
