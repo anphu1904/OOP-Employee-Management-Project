@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## 👤 Sample Accounts
+## 👤 Accounts
 
 - **Admin:** `admin` / `admin`
 - **Employee:** `nv` / `123`
@@ -54,6 +54,7 @@ python main.py
 ## 📦 Used Packages
 
 - `customtkinter` – Modern UI for Tkinter
+- `tkinter` - Original
 - `Pillow` – Image processing
 
 ## 📜 License
