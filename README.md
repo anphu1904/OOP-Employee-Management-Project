@@ -56,7 +56,8 @@ python main.py
 ## 📦 Used Packages
 
 - `customtkinter` – Modern UI for Tkinter
-- `tkinter` - Original
+- `tkinter` - Original UI
+- `tkcalendar` - Input date by calendar
 - `Pillow` – Image processing
 
 ## 📜 License
