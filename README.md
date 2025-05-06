@@ -1,4 +1,4 @@
-# Employee Management System
+# Employee Management Project
 
 A modern employee management application built with Python and [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter). It supports login functionality, employee management (add/delete/search), data storage in JSON format, and CSV export.
 
