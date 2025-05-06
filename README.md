@@ -4,7 +4,7 @@ A modern employee management application built with Python and [CustomTkinter](h
 
 ## 💻 Features
 
-- Login with two roles: Admin and Employee
+- Login with two roles: Admin (admin) and Employee (nv)
 - Animated UI with smooth transitions
 - Add, delete, and search employees
 - Save employee data to `.json` and export to `.csv`
