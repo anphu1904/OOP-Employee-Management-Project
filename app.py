@@ -18,8 +18,8 @@ def LoadingOverlay(parent, text="Đang xử lý..."):
     overlay.overrideredirect(True)
     overlay.configure(fg_color="#1a1a1a")
     overlay.attributes("-topmost", True)
-    label = ctk.CTkLabel(overlay, text=text, font=ctk.CTkFont("Segoe UI",20,'bold'), text_color='white')
-    label.place(relx=0.5, rely=0.5, anchor='center')
+    label = ctk.CTkLabel(overlay, text=text, font=ctk.CTkFont("Comic Sans MS",20,'bold'), text_color='white')
+    label.place(relx=0.42, rely=0.42, anchor="center")
     overlay.update()
     return overlay
 
